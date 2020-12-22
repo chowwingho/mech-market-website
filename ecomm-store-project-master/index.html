@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mech Market Website</title>
+    <meta name="description" content="[Your one stop shop for building custom mechanical keyboards. Parts, tools, accessories, and full DIY kits, everything you need to get that perfect typing experience.]">
+    <meta name="author" content="[Johnny Chow]">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header class="page-header">
+      <a href="index.html" class="logo"> <img src="img/Mechlogo.svg" alt="header logo"></a>
+     
+      <!-- Navigation menu and toggle button (non-functional) -->
+      <button type="button" class="nav-toggle">
+        <span class="material-icons">menu</span>
+      </button>
+      <nav aria-label="Primary" class="navigation">
+        <ul class="menu">
+          <li><a href="#">Shop</a>
+            <ul class="submenu">
+              <li><a href="#">All Products</a></li>
+              <li><a href="#">New Arrivials</a></li>
+              <li><a href="#">DIY Kits</a></li>
+              <li><a href="#">Accessories</a></li>
+              <li><a href="#">Plates</a></li>
+              <li><a href="#">PCBs</a></li>
+              <li><a href="#">Key Switches</a></li>
+              <li><a href="#">Keycaps</a></li>
+              <li><a href="#">Case</a></li>
+
+            </ul>
+          </li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Search for a product (non-functional) -->
+      <!-- <form class="search">
+        <label>Search
+          <input type="search" name="find" id="find">
+        </label>
+        <button type="button"><span class="search-button">search</span></button>
+-->
+        <img src="img/full search.svg" class="search-button" alt="search button">
+     <!--  </form>-->
+
+      <!-- Additional links -->
+      <ul class="your-products">
+       <!-- <li><a href="#"><span class="material-icons" aria-label="Favourites">favorite_border</span></a></li>
+        <li><a href="#"><span class="material-icons" aria-label="Items in your cart">shopping_cart</span></a></li> -->
+        <img src="img/likebutton.svg" class="like-button" alt="favourite button">
+        <img src="img/cartbutton.svg" class="cart-button" alt="my cart">
+      </ul>
+    </header>
+
+    <main class="products">
+      <header class="heading">
+        <h1>Sale on Key Switches</h1>
+      </header>
+
+      <!-- Filtering product form -->
+      <form class="filters"> 
+        <h2>Filters</h2>
+
+        <div class="filter-options">
+          <fieldset>
+            <legend>Switch Type</legend>
+            <ul class="filter-list">
+              <li><input type="checkbox" name="type" value="linear" id="linear"> <label for="linear">Linear</label></li>
+              <li><input type="checkbox" name="type" value="clicky" id="clicky"> <label for="clicky">Clicky</label></li>
+              <li><input type="checkbox" name="type" value="tactile" id="tactile"> <label for="tactile">Tactile</label></li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Producer</legend>
+            <ol class="filter-list">
+              <li><input type="checkbox" name="cherry" value="cherry" id="cherry"> <label for="cherry">Cherry</label></li>
+              <li><input type="checkbox" name="kahil" value="kahil" id="kahil"> <label for="kahil">Kahil</label></li>
+              <li><input type="checkbox" name="gateron" value="gateron" id="gateron"> <label for="gateron">Gateron</label></li>
+              <li><input type="checkbox" name="novelkeys" value="novelkeys" id="novelkeys"> <label for="novelkeys">Novelkeys</label></li>
+              <li><input type="checkbox" name="zealpc" value="zealpc" id="zealpc"> <label for="zealpc">Zeal PC</label></li>
+            </ol>
+          </fieldset>
+          <fieldset>
+            <legend>Ratings (above)</legend>
+            <ol class="filter-list">
+              <li>
+                <input type="radio" name="rating" value="4" id="aboveFour">
+                <label for="aboveFour">
+                  <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_border</span>
+                </label>
+              </li>
+              <li>
+                <input type="radio" name="rating" value="3" id="aboveThree">
+                <label for="aboveThree">
+                  <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span>
+                </label>
+              </li>
+              <li>
+                <input type="radio" name="rating" value="2" id="aboveTwo">
+                <label for="aboveTwo">
+                  <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span>
+                </label>
+              </li>
+              <li>
+                <input type="radio" name="rating" value="1" id="aboveOne">
+                <label for="aboveOne">
+                  <span class="material-icons">star</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span>
+                </label>
+              </li>
+            </ol>
+          </fieldset>
+        </div>
+        <fieldset>
+          <label for="sort">Show</label>
+          <select name="sort" id="sort">
+            <option value="price-high">Price, highest to lowest</option>
+            <option value="price-low">Price, lowest to highest</option>
+            <option value="newest">Newest releases</option>
+          </select>
+        </fieldset>
+      </form>
+
+      <section class="results">
+        <h2 class="subheading">Results</h2>
+
+        <!-- Product 1 -->
+        <article class="product">
+          <header>
+            <img src="img/nk-cream.jpg" alt="Product Image">
+            <h3>NovelKeys Cream switches</h3>
+            <data value="39"><del>$45.00</del> <ins>$39.00</ins></data>
+            <p>NovelKeys Cream switches are a brand new linear switch. Featuring housing and stem that is made out of self lubricating POM, this linear is a smooth and unique experience.</p>
+            <dl>
+              <dt>Rating</dt>
+              <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
+            </dl>
+            <a href="#">see more</a>
+          </header>
+          <form>
+            <fieldset>
+              <legend>Amount</legend>
+              <ul>
+                <li><label><input type="radio" name="amount" value="70"> 70</label></li>
+                <li><label><input type="radio" name="colour" value="90"> 90</label></li>
+                <li><label><input type="radio" name="colour" value="110"> 110</label></li>
+              </ul>
+            </fieldset>
+           
+          </form>
+          <footer>
+          <!--   <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
+            <button type="button"><span class="material-icons">favorite</span></button>-->
+            <img src="img/add-to-cart.svg" class="add-button" alt="add to cart">
+            <img src="img/likebutton.svg" class="like-button" alt="favourite button">
+           
+          </footer>
+        </article>
+
+        <!-- Product 2 -->
+        <article class="product">
+          <header>
+            <img src="img/gat-yellow.jpg" alt="Product Image">
+            <h3>Gateron Yellow switches</h3>
+            <data value="39"><del>$20.00</del> <ins>$14.00</ins></data>
+            <p>A linear switch with 50gs of actuation force. PCB mounted. Incredible performance for building on a budget!</p>
+            <dl>
+              <dt>Rating</dt>
+              <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
+            </dl>
+            <a href="#">see more</a>
+          </header>
+          <form>
+            <fieldset>
+              <legend>Amount</legend>
+              <ul>
+                <li><label><input type="radio" name="amount" value="70"> 70</label></li>
+                <li><label><input type="radio" name="colour" value="90"> 90</label></li>
+                <li><label><input type="radio" name="colour" value="110"> 110</label></li>
+              </ul>
+            </fieldset>
+            
+          </form>
+          <footer>
+                    <!--   <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
+            <button type="button"><span class="material-icons">favorite</span></button>-->
+            <img src="img/add-to-cart.svg" class="add-button" alt="add to cart">
+            <img src="img/likebutton.svg" class="like-button" alt="favourite button">
+          </footer>
+        </article>
+
+        <!-- Product 3 -->
+        <article class="product">
+          <header>
+            <img src="img/cherry-blue.jpg" alt="Product Image">
+            <h3>Cherry MX Blue</h3>
+            <data value="39"><del>$20.00</del> <ins>$14.00</ins></data>
+            <p>Medium actuation force coupled with an tactile and audible feedback. A great choice for those looking for a "clicky" typing experience!</p>
+            <dl>
+              <dt>Rating</dt>
+              <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
+            </dl>
+            <a href="#">see more</a>
+          </header>
+          <form>
+            <fieldset>
+              <legend>Amount</legend>
+              <ul>
+                <li><label><input type="radio" name="amount" value="70"> 70</label></li>
+                <li><label><input type="radio" name="colour" value="90"> 90</label></li>
+                <li><label><input type="radio" name="colour" value="110"> 110</label></li>
+              </ul>
+            </fieldset>
+           
+          </form>
+          <footer>
+                  <!--   <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
+            <button type="button"><span class="material-icons">favorite</span></button>-->
+            <img src="img/add-to-cart.svg" class="add-button" alt="add to cart">
+            <img src="img/likebutton.svg" class="like-button" alt="favourite button">
+          </footer>
+        </article>
+  
+        <!-- Product 4 -->
+        <article class="product">
+          <header>
+            <img src="img/zealios.jpg" alt="Product Image">
+            <h3>Zealio V2</h3>
+            <data value="39"><del>$100.00</del> <ins>$84.00</ins></data>
+            <p>"Crisp & responsive" tactile bump feeling at the very top with more cushion during bottom out than 65g Zealio V2..</p>
+            <dl>
+              <dt>Rating</dt>
+              <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
+            </dl>
+            <a href="#">see more</a>
+          </header>
+          <form>
+            <fieldset>
+              <legend>Amount</legend>
+              <ul>
+                <li><label><input type="radio" name="amount" value="70"> 70</label></li>
+                <li><label><input type="radio" name="colour" value="90"> 90</label></li>
+                <li><label><input type="radio" name="colour" value="110"> 110</label></li>
+              </ul>
+            </fieldset>
+            
+             
+          </form>
+          <footer>
+                    <!--   <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
+            <button type="button"><span class="material-icons">favorite</span></button>-->
+            <img src="img/add-to-cart.svg" class="add-button" alt="add to cart">
+            <img src="img/likebutton.svg" class="like-button" alt="favourite button">
+          </footer>
+        </article>
+
+        <!-- Product 5 -->
+        <article class="product">
+          <header>
+            <img src="img/holy-panda.jpeg" alt="Product Image">
+            <h3>Holy Panda switches</h3>
+            <data value="39"><del>$50.00</del> <ins>$39.00</ins></data>
+            <p>Made with stems from Halo Clears or Halo Trues, with the housing found on Invyr Panda switches, Holy Panda switches combine the best of two worlds. The result is a snappy, tactile switch that is satisfying to type on.</p>
+            <dl>
+              <dt>Rating</dt>
+              <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
+            </dl>
+            <a href="#">see more</a>
+          </header>
+          <form>
+            <fieldset>
+              <legend>Amount</legend>
+              <ul>
+                <li><label><input type="radio" name="amount" value="70"> 70</label></li>
+                <li><label><input type="radio" name="colour" value="90"> 90</label></li>
+                <li><label><input type="radio" name="colour" value="110"> 110</label></li>
+              </ul>
+            </fieldset>
+            
+          </form>
+          <footer>
+          <!--   <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
+            <button type="button"><span class="material-icons">favorite</span></button>-->
+            <img src="img/add-to-cart.svg" class="add-button" alt="add to cart">
+            <img src="img/likebutton.svg" class="like-button" alt="favourite button">
+          </footer>
+        </article>
+
+        <!-- Product 6 -->
+        <article class="product">
+          <header>
+            <img src="img/halo-clear.jpg" alt="Product Image">
+            <h3>Halo Clear switches</h3>
+            <data value="39"><del>$50.00</del> <ins>$39.00</ins></data>
+            <p>Developed by Jacob Alexander, these custom switches combine the best attributes of quiet and clicky switches, which results in near perfect consistency and smoothness with each keypress. Halo Clears emulate Cherry MX Clear switches.</p>
+            <dl>
+              <dt>Rating</dt>
+              <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
+            </dl>
+            <a href="#">see more</a>
+          </header>
+          <form>
+            <fieldset>
+              <legend>Amount</legend>
+              <ul>
+                <li><label><input type="radio" name="amount" value="70"> 70</label></li>
+                <li><label><input type="radio" name="colour" value="90"> 90</label></li>
+                <li><label><input type="radio" name="colour" value="110"> 110</label></li>
+              </ul>
+            </fieldset>
+            
+          </form>
+          <footer>
+                 <!--   <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
+            <button type="button"><span class="material-icons">favorite</span></button>-->
+            <img src="img/add-to-cart.svg" class="add-button" alt="add to cart">
+            <img src="img/likebutton.svg" class="like-button" alt="favourite button">
+          </footer>
+        </article>
+      </section>
+
+      <nav aria-label="Pagination" class="pagination">
+        <p>1-6 of 23 products found</p>
+        <ol class="pages">
+          <li><a href="#" aria-label="Current Page, Page 1" aria-current="true">1</a></li>
+          <li><a href="#" aria-label="Page 2">2</a></li>
+          <li><a href="#" aria-label="Page 3">3</a></li>
+          <li><a href="#" aria-label="Page 4">4</a></li>
+          <li><a href="#" aria-label="Page 5">5</a></li>
+        </ol>
+      </nav>
+    </main>
+
+    <footer class="page-footer">
+      <ul class="social">
+        <li><a href="https://www.facebook.com/"> <img src="img/facebook-footer.svg" class="facebook-button" alt="facebook-button"></a></li>
+        <li><a href="instagram.com"><img src="img/instagram-footer.svg" class="instagram-button" alt="instagram-button"></a></li>
+        <li><a href="twitter.com"> <img src="img/twitter-footer.svg" class="twitter-button" alt="twitter-button"></li>
+      </ul>
+      <nav aria-label="Legal">
+        <ul class="legal">
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Accessibility Policy</a></li>
+        </ul>
+      </nav>
+      <p class="copyright">&copy; Copyright, 2020 Mech Market, Inc. All rights reserved.</p>
+    </footer>
+
+  </body>
+</html>
